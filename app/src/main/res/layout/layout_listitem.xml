@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/parent_layout">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        card_view:cardCornerRadius="0dp"
+        card_view:cardElevation="10dp"
+        card_view:cardMaxElevation="10dp"
+        android:layout_margin="5dp"
+        card_view:contentPadding="10dp">
+
+
+        <LinearLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/resImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:src= "@mipmap/ic_launcher"
+                android:layout_margin="10dp"/>
+
+
+            <!--<TextView-->
+                <!--android:id="@+id/resTxt"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_below="@+id/resImage" />-->
+
+
+            <TextView
+                android:id="@+id/titletxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_centerHorizontal="true"
+               />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/ziptxt"
+               />
+                <!--android:layout_below="@+id/titletxt"-->
+
+
+                <ImageButton
+                    android:id="@+id/wishList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:tint="@color/addcart"
+                    android:background="@null"
+                    android:src="@drawable/cartplus"
+                    />
+                <!--android:layout_below="@id/titletxt"-->
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+
+                android:id="@+id/shippingtxt"/>
+
+                <!--android:layout_below="@+id/ziptxt"-->
+
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:layout_below="@id/shippingtxt"-->
+
+                    <!--android:id="@+id/conditionTxt"/>-->
+
+
+                <!--android:layout_below="@+id/wishList"-->
+
+
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="98dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:lines="2"
+                    android:singleLine="false"
+                    android:minLines="2"
+                    android:id="@+id/conditionTxt"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/pricecolor"
+                    android:id="@+id/pricetxt"
+                    />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>

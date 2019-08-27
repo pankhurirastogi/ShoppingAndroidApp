@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200ee</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#bb86fc</color>
+    <!--<color name="background">#f57b5b</color>-->
+    <color name="background">#F44336</color>
+    <color name="hr">#DADADA</color>
+    <color name="addcart">#c5c5c5</color>
+    <color name="removeCart">#f57b5b</color>
+    <color name="pricecolor">#6200EE</color>
+    <color name="colorYellow">#FFFF00</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorGreen">#008000</color>
+    <color name="colortoq">#40E0D0</color>
+    <color name="colorpurple">#800080</color>
+    <color name="colorsilver">#C0C0C0</color>
+    <color name="blue">#0000FF</color>
+    <color name="icons">#767676</color>
+
+</resources>

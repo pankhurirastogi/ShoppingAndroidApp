@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:fillViewport="false">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SearchPage">
+
+    <!-- TODO: Update blank fragment layout -->
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:text="@string/hello_blank_fragment" />-->
+
+    <TextView
+        android:id="@+id/keywordLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Keyword" />
+
+
+    <EditText
+        android:id="@+id/keywordTxt"
+        android:layout_height="wrap_content"
+        android:hint="Enter Keyword"
+        android:inputType="text"
+        android:layout_width="fill_parent">
+    </EditText>
+
+    <TextView
+        android:id="@+id/keywordErro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please enter mandatory field"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/categoryLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category" />
+
+    <Spinner
+        android:id="@+id/SpinnerCat"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:entries="@array/feedbacktypelist">
+    </Spinner>
+
+    <TextView
+        android:id="@+id/conditionLabel"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Condition" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+        <CheckBox android:id="@+id/newCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="New"/>
+            <!--android:onClick="onCheckboxClicked"-->
+
+        <CheckBox android:id="@+id/usedCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="Used"/>
+            <!--android:onClick="onCheckboxClicked"-->
+
+        <CheckBox android:id="@+id/unCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="Unspecified"/>
+        <!--android:onClick="onCheckboxClicked"-->
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/shipLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shipping Options" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+        <CheckBox android:id="@+id/locCheckbox"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Local Pickup"/>
+        <!--android:onClick="onCheckboxClicked"-->
+
+        <CheckBox android:id="@+id/freeCheckbox"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Free Shipping"/>
+        <!--android:onClick="onCheckboxClicked"-->
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/hiddenZip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="90007"
+        android:visibility="gone"/>
+
+    <CheckBox android:id="@+id/enbNrSrchLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:onClick ="editcheckbox"
+        android:text="Enable Nearby Search"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchLayout"
+        android:layout_margin="10dp"
+        android:visibility="gone">
+
+
+
+        <EditText
+            android:id="@+id/dist"
+            android:layout_height="wrap_content"
+            android:hint="Miles from"
+            android:inputType="text"
+            android:layout_width="fill_parent">
+        </EditText>
+
+
+        <TextView
+            android:id="@+id/locLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="From" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+            <RadioButton android:id="@+id/radio_curr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:onClick="onRadioButtonClicked"
+               />
+            <RadioButton android:id="@+id/radio_diff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:onClick="onRadioButtonClicked"
+                />
+        </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="220dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Location"/>
+
+                <android.support.v7.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/auto_complete_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:hint="Zip Code    "
+                    android:dropDownAnchor="@id/categoryLabel"
+                    android:layout_margin="10dp"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:maxLines="1"/>
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/zipcodeerror"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please enter mandatory field"
+            android:textColor="@android:color/holo_red_dark"
+            android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/seachBtn"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textColor="@android:color/white"
+            android:onClick="searhProducts"
+            android:layout_marginRight="10dp"
+            android:background="@color/background"
+            >
+        </Button>
+
+        <Button
+            android:id="@+id/clrBtn"
+            android:layout_width="160dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:text="clear"
+            android:textColor="@android:color/white"
+            android:onClick="onClear"
+            android:background="@color/background"
+            >
+        </Button>
+
+    </LinearLayout>
+
+    <!--<Button-->
+        <!--android:id="@+id/clearSharedPref"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Clear shared prefernces"-->
+        <!--android:onClick="clearhsharedPreference"-->
+        <!--android:layout_width="wrap_content">-->
+    <!--</Button>-->
+
+
+
+
+
+
+
+</LinearLayout>
+</ScrollView>

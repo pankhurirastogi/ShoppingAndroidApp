@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:fillViewport="false">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ShippingDetail">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_blank_fragment" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hello_blank_fragment" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hello_blank_fragment" />
+
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="test view" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="test view" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="test view" />
+
+    <LinearLayout
+        android:id="@+id/soldByHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:padding="8dp"
+        android:tint= "@color/icons"
+        android:src="@drawable/truck"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:padding="3dip"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:text="Sold By" />
+    </LinearLayout>
+    <TableLayout
+        android:id="@+id/storeTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TableRow android:id="@+id/storeRow"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/stornamlbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Store Name"
+
+                 />
+
+            <!--android:padding="3dip"-->
+
+            <!--android:layout_weight="0.1"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textColor="@android:color/black"-->
+
+            <TextView
+                android:id="@+id/stornamVl"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+
+                />
+
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="0.2"-->
+            <!--android:gravity="left"-->
+            <!--android:id="@+id/storename"-->
+            <!--android:padding="3dip"-->
+            <!--android:textColor="#6200EE"-->
+        </TableRow>
+
+
+        <TableRow android:id="@+id/FdbckRow"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/fdbcklbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feedback Score"
+
+                />
+
+
+            <TextView
+                android:id="@+id/fdbckval"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+
+                />
+
+
+        </TableRow>
+
+        <TableRow android:id="@+id/poplrRow"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/poplrLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feedback Score"
+                android:layout_marginTop="8dp"
+
+                />
+
+
+            <com.wssholmes.stark.circular_score.CircularScoreView
+                android:id="@+id/poplrval"
+                android:layout_width="37dp"
+                android:layout_weight="0.2"
+                android:gravity="left"
+                android:layout_height="35dp"
+                app:score="12"
+                android:padding="3dip"
+                app:setPrimaryColor="@android:color/holo_red_light"
+                app:setBackgroundColor="@android:color/white"
+                app:setTextColor="@android:color/black"/>
+
+
+
+        </TableRow>
+
+
+        <TableRow android:id="@+id/starRow"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/starLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Feedback Score"
+
+                />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/feedbackstartext"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="left"
+                android:padding="8dp"
+                android:src="@drawable/starcircle" />
+
+
+        </TableRow>
+
+
+
+    </TableLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:background="#DADADA" />
+
+    <LinearLayout
+        android:id="@+id/shipInfoHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:tint="@color/icons"
+            android:padding="8dp"
+            android:src="@drawable/ferry"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:padding="3dip"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:text="Shipping Info" />
+
+    </LinearLayout>
+    <TableLayout
+        android:id="@+id/shipTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+
+
+
+    </TableLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:background="#DADADA" />
+
+    <LinearLayout
+        android:id="@+id/retPolicyHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:padding="8dp"
+            android:tint= "@color/icons"
+            android:src="@drawable/dumptruck"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:padding="3dip"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:text="Return Policy" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/RetTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="15dp">
+
+
+
+
+    </TableLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:background="#DADADA" />
+
+
+
+
+
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Product Search</string>
+    <string name="action_settings">Settings</string>
+    <!--Other string resources also defined in this file… -->
+    <string name="cat0">All</string>
+    <string name="cat1">Art</string>
+    <string name="cat2">Baby</string>
+    <string name="cat3">Books</string>
+    <string name="cat4">Clothing, Shoes &amp; Accessories</string>
+    <string name="cat5">Computers/Tablets &amp; Networking</string>
+    <string name="cat6">Health &amp; Beauty</string>
+    <string name="cat8">Music</string>
+    <string name="cat7">Video Games &amp; Consoles</string>
+    <string name="sort1">Default</string>
+    <string name="sort2">Name</string>
+    <string name="sort3">Price</string>
+    <string name="sort4">Days</string>
+    <string name="order1">Ascending</string>
+    <string name="order2">Descending</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_search_results">SearchResultsActivity</string>
+    <string name="title_activity_item_details">ItemDetails</string>
+</resources>

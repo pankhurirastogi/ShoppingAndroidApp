@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="feedbacktypelist">
+        <item>@string/cat0</item>
+        <item>@string/cat1</item>
+        <item>@string/cat2</item>
+        <item>@string/cat3</item>
+        <item>@string/cat4</item>
+        <item>@string/cat5</item>
+        <item>@string/cat6</item>
+        <item>@string/cat8</item>
+        <item>@string/cat7</item>
+
+    </string-array>
+    <string-array name="sortByArr">
+        <item>@string/sort1</item>
+        <item>@string/sort2</item>
+        <item>@string/sort3</item>
+        <item>@string/sort4</item>
+    </string-array>
+
+    <string-array name="orderByArr">
+        <item>@string/order1</item>
+        <item>@string/order2</item>
+
+    </string-array>
+</resources>

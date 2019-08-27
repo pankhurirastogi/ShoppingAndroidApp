@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".photos">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_blank_fragment" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I am working"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I am working"
+        android:layout_marginTop="25dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:text=""
+        />
+    <ProgressBar
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dataLoadPhotos"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/srchResltsPhotos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Searching Products..."
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:layout_marginTop="35dp"
+        android:id="@+id/photoError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Photos Found"
+        android:visibility="gone"
+        />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/photoSroll"
+        android:layout_marginTop="20dp"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/photolayout">
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
